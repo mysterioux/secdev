@@ -2,8 +2,7 @@ This is a sample file
 showing the power
 
 of using both 
-space 
-and
+space and
 
 some words to count
 the total
