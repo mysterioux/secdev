@@ -20,7 +20,7 @@ def checkline():
 	wordcount += len(word)
 
 #Main execution script
-wordcount = letter = 0
+wordcount = 0
 f = open(sys.argv[1]) #sys.argv[0] is the scanlist.py 
 flines = f.readlines()
 linecount = len(flines)
