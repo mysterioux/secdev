@@ -35,6 +35,7 @@ linecount = len(flines) #count the total line
 #for each line of values, call checkline
 for line in flines:
 	checkline()
+	
 print "Total line Numbers: " + str(linecount)
 print "Total number of Words: " + str(wordcount)
 print "Total number of Letters: " + str(letters)
