@@ -1,0 +1,13 @@
+This is a sample file
+showing the power
+
+of using both 
+space 
+and
+
+some words to count
+the total
+
+
+number of lines in the file 
+more like what msword uses
