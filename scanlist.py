@@ -11,17 +11,23 @@ def checkline():
 	global wordcount
 
 	word = line.split()
+	
+	#next assignment
+	#convert the list to a sing string
+	#get the total number of letters in the string
+	#split each as a single letter
+
 	wordcount += len(word)
 
 #Main execution script
-wordcount = 0
+wordcount = letter = 0
 f = open(sys.argv[1]) #sys.argv[0] is the scanlist.py 
 flines = f.readlines()
 linecount = len(flines)
 for line in flines:
 	checkline()
-print linecount,wordcount
-
+print "Total line Numbers: " + str(linecount)
+print "Total number of Words: " + str(wordcount)
 
 #how to run
 #install python27
