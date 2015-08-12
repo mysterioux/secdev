@@ -12,7 +12,7 @@ def checkline():
 
 	#for each line received, convert to list by splitting result
 	word = line.split()
-		
+
 	#get the total number of words
 	wordcount += len(word)
 	
@@ -30,7 +30,9 @@ def checkline():
 wordcount = letters = 0
 f = open(sys.argv[1]) #sys.argv[0] is the scanlist.py 
 flines = f.readlines()
-linecount = len(flines)
+linecount = len(flines) #count the total line
+
+#for each line of values, call checkline
 for line in flines:
 	checkline()
 print "Total line Numbers: " + str(linecount)
