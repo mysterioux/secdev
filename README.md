@@ -4,4 +4,4 @@ The following files are the list of programs currently in study mode which i'm d
 If however, there are serious tools, it will be placed in its own repository. Enjoy!
 
 #LIST OF PROGRAM
-1. <a ="https://github.com/mysterioux/secdev/blob/master/scanlist.py">scanlist.py</a>
+1. scanlist.py - a program that scans a file and provides the line numbers total, total number of words and letters in the file
