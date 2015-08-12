@@ -37,9 +37,3 @@ print "Total line Numbers: " + str(linecount)
 print "Total number of Words: " + str(wordcount)
 print "Total number of Letters: " + str(letters)
 
-#how to run
-#install python27
-#make sure its in your PATH system
-#open a command prompt
-#type: python scanlist.py sample.txt
-#where sample.txt could be anything
