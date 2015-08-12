@@ -38,4 +38,3 @@ for line in flines:
 print "Total line Numbers: " + str(linecount)
 print "Total number of Words: " + str(wordcount)
 print "Total number of Letters: " + str(letters)
-
