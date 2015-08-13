@@ -27,23 +27,29 @@ def retBanner(ip,port):
 		return message
 
 def checkVulns(banner):
-	if "FreeFloat FTP Server" in banner:
-		print "Frefloat ftp server is vulnerable to an attack"
-	elif '3Com 3CDaemon FTP Server Version 2.0' in banner:
-		print '[+] 3CDaemon FTP Server is vulnerable.'
-	elif 'Ability Server 2.34' in banner:
-		print '[+] Ability FTP Server is vulnerable.'
-	elif 'Sami FTP Server 2.0.2' in banner:
-		print '[+] Sami FTP Server is vulnerable.'
-	else:
-		print '[-] FTP Server is not vulnerable.'
+	f = open('vuln_banner.txt','r') #file must be place in the same root directory
+	for line in f.readlines():
+		if line.strip('\n') in banner:
+			print "[+] Server is vulnerable " + banner.strip("\n")
+		else:
+			print banner
+			print "[-] Server is safe for now"
+	# 	print "Frefloat ftp server is vulnerable to an attack"
+	# elif '3Com 3CDaemon FTP Server Version 2.0' in banner:
+	# 	print '[+] 3CDaemon FTP Server is vulnerable.'
+	# elif 'Ability Server 2.34' in banner:
+	# 	print '[+] Ability FTP Server is vulnerable.'
+	# elif 'Sami FTP Server 2.0.2' in banner:
+	# 	print '[+] Sami FTP Server is vulnerable.'
+	# else:
+	# 	print '[-] FTP Server is not vulnerable.'
 	return
 
 #our main entering for the app
 def main():
 	portList = [21,22,25,53,80,110,443]
 	#change range(1,255) after production
-	for ip in range(1,10):
+	for ip in range(1,3):
 		ipAddress = "192.168.10."+str(ip)
 		for port in portList:
 			banner = retBanner(ipAddress,port)
