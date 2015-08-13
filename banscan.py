@@ -48,7 +48,7 @@ def main():
 		for port in portList:
 			banner = retBanner(ipAddress,port)
 			if banner:
-				print "[+]" + str(domain1) + ":" + str(portid1)
+				print "[+]" + str(ipAddress) + ":" + str(port)
 				checkVulns(banner)
 				print "\n"
 
