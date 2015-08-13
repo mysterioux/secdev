@@ -14,11 +14,9 @@ def retBanner(ip,port):
 		#creates a socket object
 		s = socket.socket()
 
-		#creates a list of dictionary port identifier 
-		portList = {"ftp":21,"ssh":22,"smtp":25,"dns":53,"http":80,"https":443}
 
 		#connect to the remote host with port number
-		s.connect((socket.gethostbyname(ip),portList[port]))
+		s.connect((socket.gethostbyname(ip),port))
 
 		#set a packet buffer size to receive
 		banner = s.recv(4028)
@@ -43,23 +41,17 @@ def checkVulns(banner):
 
 #our main entering for the app
 def main():
-	domain1 = "localhost"
-	domain2 = "127.0.0.1"
-	portid1 = 'ftp'
-	portid2 = 80
+	portList = [21,22,25,53,80,110,443]
+	#change range(1,255) after production
+	for ip in range(1,10):
+		ipAddress = "192.168.10."+str(ip)
+		for port in portList:
+			banner = retBanner(ipAddress,port)
+			if banner:
+				print "[+]" + str(domain1) + ":" + str(portid1)
+				checkVulns(banner)
+				print "\n"
 
-	banner1 = retBanner(domain1,portid1)
-
-	if banner1:
-		print "[+] Banner 1 has: " + str(domain1) + ":" + str(portid1)
-		checkVulns(banner1)
-		print "\n"
-
-	banner2 = retBanner(domain2,portid2)
-	if banner2:
-		print "[+] Banner 1 has: " + str(domain2) + ":" + str(portid2)
-		checkVulns(banner2)
-		print "\n"
 
 #main entering call function of the app
 if __name__ == '__main__':
