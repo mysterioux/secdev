@@ -5,3 +5,4 @@ If however, there are serious tools, it will be placed in its own repository. En
 
 #LIST OF PROGRAM
 1. scanlist.py - a program that scans a file and provides the line numbers total, total number of words and letters in the file
+2. barscan.py - a program that scans the banner message of banners to check if its has a known potential vulnerability 

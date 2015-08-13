@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # created by: echris
-# reads in the text file naem is specified on the command lie3n
+# filename: banscan.y
+# description: reads in the text file naem is specified on the command lie3n
 # and reports the number of lines and words
 
 import sys
@@ -35,7 +36,7 @@ linecount = len(flines) #count the total line
 #for each line of values, call checkline
 for line in flines:
 	checkline()
-	
+
 print "Total line Numbers: " + str(linecount)
 print "Total number of Words: " + str(wordcount)
 print "Total number of Letters: " + str(letters)
