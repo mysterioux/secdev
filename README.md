@@ -7,3 +7,4 @@ If however, there are serious tools, it will be placed in its own repository. En
 1. scanlist.py - a program that scans a file and provides the line numbers total, total number of words and letters in the file
 2. barscan.py - a program that scans the banner message of banners to check if its has a known potential vulnerability 
 3. crack.py - a simple brute-force file for cracking Unix passwords using crypt() system
+4. zipcrack.py - a simple brute-force file that tries to break passworded zip files
