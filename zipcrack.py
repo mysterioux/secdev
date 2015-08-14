@@ -41,6 +41,7 @@ def userChoice(option):
 		else:
 			zfile = zipfile.ZipFile(zname)
 			passfile = open(dictname,'r')
+
 			for line in passfile.readlines():
 				password = line.strip("\n")
 				guess = extractFile(zfile,password)
